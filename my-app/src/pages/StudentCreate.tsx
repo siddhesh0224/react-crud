@@ -4,14 +4,7 @@ import api from "../api";
 
 function StudentCreate() {
     const navigate = useNavigate();
-    const [form, setForm] = useState({
-        fname: "",
-        lname: "",
-        rollno: "",
-        age: "",
-        class_name: "",
-        grade: "",
-    });
+    const [form, setForm] = useState({});
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setForm({ ...form, [e.target.name]: e.target.value });
@@ -44,9 +37,7 @@ function StudentCreate() {
             <form onSubmit={handleSubmit} className="space-y-3">
                 {["fname", "lname", "rollno", "age", "class_name", "grade"].map((field) => (
                     <input
-                        key={field}
                         name={field}
-                        value={(form as any)[field]}
                         onChange={handleChange}
                         placeholder={field}
                         className="block w-full p-2 border rounded"
