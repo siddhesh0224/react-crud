@@ -9,6 +9,9 @@ db.sqlite3
 *.pyc
 *.log
 
+# Django
+students/migrations/
+
 # OS-specific
 .DS_Store
 Thumbs.db
